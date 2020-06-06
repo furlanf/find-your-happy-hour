@@ -8,3 +8,7 @@ erl_crash.dump
 *.beam
 /config/*.secret.exs
 .elixir_ls/
+/priv/static/
+/assets/node_modules/
+npm-debug.log
+find_your_happy_hour-*.tar
