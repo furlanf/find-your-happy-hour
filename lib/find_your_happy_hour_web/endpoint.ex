@@ -7,7 +7,7 @@ defmodule FindYourHappyHourWeb.Endpoint do
   @session_options [
     store: :cookie,
     key: "_find_your_happy_hour_key",
-    signing_salt: "b7CmaD+p"
+    signing_salt: "bJNN3b5T"
   ]
 
   socket "/socket", FindYourHappyHourWeb.UserSocket,

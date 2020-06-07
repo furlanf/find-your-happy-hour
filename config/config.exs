@@ -13,10 +13,10 @@ config :find_your_happy_hour,
 # Configures the endpoint
 config :find_your_happy_hour, FindYourHappyHourWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "enb8tb8rQ1VGR+ww0EPAHTJ/HmpqYpgQat4iWWy+AjmpskR4h/T9lP78Io13NbDr",
+  secret_key_base: "pak3nOwRfEM3zWFi4FmbcpFd7v/+UM7ZH2HfRy8kAc0zf3nlWrrhhBWbRs6CY8pq",
   render_errors: [view: FindYourHappyHourWeb.ErrorView, accepts: ~w(html json), layout: false],
   pubsub_server: FindYourHappyHour.PubSub,
-  live_view: [signing_salt: "t2zZ0Z+n"]
+  live_view: [signing_salt: "dACQ7+yv"]
 
 # Configures Elixir's Logger
 config :logger, :console,
