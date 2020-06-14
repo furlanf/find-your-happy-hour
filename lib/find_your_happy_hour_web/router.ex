@@ -19,10 +19,16 @@ defmodule FindYourHappyHourWeb.Router do
     get "/", PageController, :index
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", FindYourHappyHourWeb do
-  #   pipe_through :api
-  # end
+  scope "/api", FindYourHappyHourWeb do
+    pipe_through :api
+
+    scope "/v1" do
+      post "/sign_up", UserController, :create
+      post "/sign_in", UserController, :sign_in
+      resources "/user", UserController, only: [:update, :show, :delete]
+    end
+    
+  end
 
   # Enables LiveDashboard only for development
   #
