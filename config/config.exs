@@ -26,6 +26,12 @@ config :logger, :console,
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 
+config :find_your_happy_hour, FindYourHappyHour.Guardian,
+       issuer: "find_your_happy_hour",
+       secret_key: "czEIvZmIVZo1Yuck7NHvsIYUbc5oCmL+X1bFHTMUQ0/N+dCRYUt+IsCD4TZZHIFH"
+
+config :bcrypt_elixir, log_rounds: 4
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env()}.exs"
