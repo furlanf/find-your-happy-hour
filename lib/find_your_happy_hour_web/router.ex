@@ -27,6 +27,7 @@ defmodule FindYourHappyHourWeb.Router do
       post "/sign_in", UserController, :sign_in
       resources "/user", UserController, only: [:update, :show, :delete]
       resources "/companies", CompanyController, except: [:new, :edit]
+      resources "/promotions", PromotionController, except: [:new, :edit]
     end
   end
 
