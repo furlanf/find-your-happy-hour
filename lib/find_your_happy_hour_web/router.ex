@@ -26,8 +26,8 @@ defmodule FindYourHappyHourWeb.Router do
       post "/sign_up", UserController, :create
       post "/sign_in", UserController, :sign_in
       resources "/user", UserController, only: [:update, :show, :delete]
+      resources "/companies", CompanyController, except: [:new, :edit]
     end
-    
   end
 
   # Enables LiveDashboard only for development
