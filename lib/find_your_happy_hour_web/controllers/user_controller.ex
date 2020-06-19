@@ -1,7 +1,6 @@
 defmodule FindYourHappyHourWeb.UserController do
   use FindYourHappyHourWeb, :controller
 
-  alias FindYourHappyHour.Guardian
   alias FindYourHappyHour.Accounts
   alias FindYourHappyHour.Accounts.Account
   alias FindYourHappyHour.Accounts.User
@@ -10,9 +9,10 @@ defmodule FindYourHappyHourWeb.UserController do
 
   def sign_in(conn, %{"email" => email, "password" => password}) do
     case Account.token_sign_in(email, password) do
-      {:ok, token, claims} ->
-        conn 
+      {:ok, token, _} ->
+        conn
         |> render("jwt.json", jwt: token)
+
       _ ->
         {:error, :unauthorized}
     end

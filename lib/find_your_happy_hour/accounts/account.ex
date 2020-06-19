@@ -19,12 +19,12 @@ defmodule FindYourHappyHour.Accounts.Account do
     with {:ok, user} <- get_by_email(email),
          do: verify_password(user, password)
   end
-  
+
   defp get_by_email(email) when is_binary(email) do
     case Repo.get_by(User, email: email) do
       nil ->
-        Bcrypt.dummy_checkpw()
         {:error, "Login error."}
+
       user ->
         {:ok, user}
     end
