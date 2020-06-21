@@ -28,6 +28,7 @@ defmodule FindYourHappyHourWeb.Router do
       resources "/user", UserController, only: [:update, :show, :delete]
       resources "/companies", CompanyController, except: [:new, :edit]
       resources "/promotions", PromotionController, except: [:new, :edit]
+      resources "/categories", CategoryController, except: [:new, :edit]
     end
   end
 
