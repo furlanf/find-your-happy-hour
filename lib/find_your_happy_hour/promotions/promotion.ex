@@ -11,6 +11,9 @@ defmodule FindYourHappyHour.Promotions.Promotion do
     field :week_day, :integer
     field :company_id, :id
 
+    many_to_many :categories, FindYourHappyHour.Categories.Category,
+      join_through: "promotion_categories"
+
     timestamps()
   end
 
