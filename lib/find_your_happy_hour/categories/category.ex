@@ -4,7 +4,6 @@ defmodule FindYourHappyHour.Categories.Category do
 
   schema "categories" do
     field :name, :string
-    belongs_to :movie, FindYourHappyHour.Promotions.Promotion
 
     timestamps()
   end

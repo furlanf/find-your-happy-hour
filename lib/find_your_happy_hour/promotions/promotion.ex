@@ -12,7 +12,7 @@ defmodule FindYourHappyHour.Promotions.Promotion do
     field :company_id, :id
 
     many_to_many :categories, FindYourHappyHour.Categories.Category,
-      join_through: "promotion_categories"
+      join_through: "promotions_categories"
 
     timestamps()
   end
